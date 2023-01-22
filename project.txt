@@ -1,0 +1,70 @@
+bank out of branch ifsc code
+neft
+
+
+
+admin can chargeback
+email => neft/ipms/upi/escrow
+different api=> user,admin,upi,neft,ipms
+add money,history  api in user
+
+
+
+future enhance => siri based payment,escrow
+
+const auth = require("../middlewares/auth");
+userId : {
+        type : mongoose.Schema.Types.ObjectId,
+        ref: "User",
+        required: true
+    }
+
+
+bank email on wrong password and transaction email
+=> add money and history of upi,imps,neft
+
+
+npm install node-fetch@2
+
+api gateway & postgress -> admin
+You can create an 11 x 12 array using np.array(range(1, 11*12+1)). You can reshape it to an (11 x 12) array and then check the position of 100. Be clear that the indexing starts from 0; hence, the 9th row will have the index 8.
+Alternatively, you can also use np.unravel_index(99, (11,12)) on the created array.
+
+email,otp
+async function small(){
+    const data = {};
+
+    fetch('http://localhost:3000/lockerType/auto/1', {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Success:', data);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      }); 
+      
+}
+
+rollback add()
+api gateway , morgan , deploy(),swagger,testing
+
+npm install chai-http -g
+npm install mocha
+npm install mocha -g
+npm install chai -g
+npm install --global mocha
+npm install --save-dev mocha
+npm install request --save-dev
+npm install mocha chai --save-dev
+npm audit fix 
+
+
+
+6 digit code
+screen color entry

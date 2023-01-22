@@ -1,0 +1,6 @@
+projectKey=neft
+serverUrl=http://localhost:9000
+serverVersion=9.8.0.63668
+dashboardUrl=http://localhost:9000/dashboard?id=neft
+ceTaskId=AYW_WtkWjjbsyQmXHcIx
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYW_WtkWjjbsyQmXHcIx

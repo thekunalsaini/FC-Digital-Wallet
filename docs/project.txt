@@ -1,0 +1,6 @@
+bank out of branch ifsc code
+
+admin can chargeback
+email => neft/ipms/upi/escrow
+different api=> user,admin,upi,neft,ipms
+

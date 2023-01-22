@@ -1,0 +1,164 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "NEFT-API",
+    "description": "NEFT API Microservice architecture",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:5004",
+  "basePath": "/neft",
+  "tags": [
+    {
+      "name": "neft",
+      "description": "API for neft in the system"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/nefttransfer": {
+      "post": {
+        "tags": [
+          "neft"
+        ],
+        "description": "neft transfer with in system",
+        "parameters": [
+          {
+            "name": "neft",
+            "in": "body",
+            "description": "neft transfer with in system",
+            "schema": {
+              "$ref": "#/definitions/nefttransfer"
+            }
+          }
+        ]
+      } 
+    },
+    "/admin/history": {
+      "get": {
+          "tags": [
+            "neft"
+          ],
+          "summary": "get all history data of neft by admin",
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "$ref": "#/definitions/admin/history"
+              }
+            }
+          }
+        }
+    },
+    "/nefttransfer/:id": {
+      "get": {
+          "tags": [
+            "neft"
+          ],
+          "summary": "get nefttransfer data by id in system",
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "$ref": "#/definitions/nefttransfer/:id"
+              }
+            }
+          }
+        }
+    },
+    "/admin/nefttransfer/:id": {
+      "delete": {
+          "tags": [
+            "neft"
+          ],
+          "summary": "delete nefttransfer data by id in system",
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "$ref": "#/definitions/admin/nefttransfer/:id"
+              }
+            }
+          }
+        }
+    }
+    },
+  "definitions": {
+    "nefttransfer": {
+      "required": [
+        "senderano",
+        "bankname",
+        "receiverano",
+        "ifsc",
+        "transamount"
+      ],
+      "properties": {
+        "senderano" : {
+          "type" : "mongoose.Schema.Types.ObjectId",
+          "ref": "User"
+      },
+      "bankname" : {
+          "type" : "String",
+          "required": true
+      },
+      "receiverano" : {
+          "type" : "String",
+          "required": true
+      },
+      "ifsc" : {
+          "type" : "String",
+          "required": true
+      },
+      "transamount" : {
+          "type": "Number",
+          "required": true
+      }
+      }
+    },
+    "admin/history": {
+      "required": [
+        "email"
+      ],
+      "properties": {
+        "email": {
+          "type": "String",
+          "required": true
+        }
+      }
+    },
+    "nefttransfer/:id": {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "String",
+          "required": true
+        }
+      }
+    },
+    "admin/nefttransfer/:id": {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "String",
+          "required": true
+        }
+      }
+    }
+  }
+}
+

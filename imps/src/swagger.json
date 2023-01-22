@@ -1,0 +1,164 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "imps-API",
+    "description": "imps API Microservice architecture",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:5005",
+  "basePath": "/imps",
+  "tags": [
+    {
+      "name": "imps",
+      "description": "API for imps in the system"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/impstransfer": {
+      "post": {
+        "tags": [
+          "imps"
+        ],
+        "description": "imps transfer with in system",
+        "parameters": [
+          {
+            "name": "imps",
+            "in": "body",
+            "description": "imps transfer with in system",
+            "schema": {
+              "$ref": "#/definitions/impstransfer"
+            }
+          }
+        ]
+      } 
+    },
+    "/admin/history": {
+      "get": {
+          "tags": [
+            "imps"
+          ],
+          "summary": "get all history data of imps by admin",
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "$ref": "#/definitions/admin/history"
+              }
+            }
+          }
+        }
+    },
+    "/impstransfer/:id": {
+      "get": {
+          "tags": [
+            "imps"
+          ],
+          "summary": "get impstransfer data by id in system",
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "$ref": "#/definitions/impstransfer/:id"
+              }
+            }
+          }
+        }
+    },
+    "/admin/impstransfer/:id": {
+      "delete": {
+          "tags": [
+            "imps"
+          ],
+          "summary": "delete impstransfer data by id in system",
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "$ref": "#/definitions/admin/impstransfer/:id"
+              }
+            }
+          }
+        }
+    }
+    },
+  "definitions": {
+    "impstransfer": {
+      "required": [
+        "senderano",
+        "bankname",
+        "receiverano",
+        "ifsc",
+        "transamount"
+      ],
+      "properties": {
+        "senderano" : {
+          "type" : "mongoose.Schema.Types.ObjectId",
+          "ref": "User"
+      },
+      "bankname" : {
+          "type" : "String",
+          "required": true
+      },
+      "receiverano" : {
+          "type" : "String",
+          "required": true
+      },
+      "ifsc" : {
+          "type" : "String",
+          "required": true
+      },
+      "transamount" : {
+          "type": "Number",
+          "required": true
+      }
+      }
+    },
+    "admin/history": {
+      "required": [
+        "email"
+      ],
+      "properties": {
+        "email": {
+          "type": "String",
+          "required": true
+        }
+      }
+    },
+    "impstransfer/:id": {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "String",
+          "required": true
+        }
+      }
+    },
+    "admin/impstransfer/:id": {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "String",
+          "required": true
+        }
+      }
+    }
+  }
+}
+

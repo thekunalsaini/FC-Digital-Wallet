@@ -1,0 +1,1 @@
+sonar-scanner.bat -D"sonar.projectKey=neft" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.login=sqp_445f80502bbd608ecf9f10422d412880e7b22a10"

@@ -1,0 +1,154 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "UPI-API",
+    "description": "UPI API Microservice architecture",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:5003",
+  "basePath": "/upi",
+  "tags": [
+    {
+      "name": "upi",
+      "description": "API for upi in the system"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/upitransfer": {
+      "post": {
+        "tags": [
+          "upi"
+        ],
+        "description": "upi transfer with in system",
+        "parameters": [
+          {
+            "name": "upi",
+            "in": "body",
+            "description": "upi transfer with in system",
+            "schema": {
+              "$ref": "#/definitions/upitransfer"
+            }
+          }
+        ]
+      } 
+    },
+    "/admin/history": {
+      "get": {
+          "tags": [
+            "upi"
+          ],
+          "summary": "get all history data of upi by admin",
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "$ref": "#/definitions/admin/history"
+              }
+            }
+          }
+        }
+    },
+    "/upitransfer/:id": {
+      "get": {
+          "tags": [
+            "upi"
+          ],
+          "summary": "get upitransfer data by id in system",
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "$ref": "#/definitions/upitransfer/:id"
+              }
+            }
+          }
+        }
+    },
+    "/admin/upitransfer/:id": {
+      "delete": {
+          "tags": [
+            "upi"
+          ],
+          "summary": "delete upitransfer data by id in system",
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "$ref": "#/definitions/admin/upitransfer/:id"
+              }
+            }
+          }
+        }
+    }
+    },
+  "definitions": {
+    "upitransfer": {
+      "required": [
+        "sender",
+        "receiver",
+        "transamount"
+      ],
+      "properties": {
+        "sender": {
+          "type": "String",
+          "required": true
+        },
+        "receiver": {
+          "type": "String",
+          "required": true
+        },
+        "transamount": {
+          "type": "Number",
+          "required": true
+        }
+      }
+    },
+    "admin/history": {
+      "required": [
+        "email"
+      ],
+      "properties": {
+        "email": {
+          "type": "String",
+          "required": true
+        }
+      }
+    },
+    "upitransfer/:id": {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "String",
+          "required": true
+        }
+      }
+    },
+    "admin/upitransfer/:id": {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "String",
+          "required": true
+        }
+      }
+    }
+  }
+}
+
