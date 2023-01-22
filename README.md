@@ -8,30 +8,30 @@ This is the Microservice architecture of Online Transfer Services Managemet syst
 Here I am using <b>http-proxy-middlewre<b> for API Gateway and its running on PORT 5000.
 API's to showcase CRUD operations using Express JS with Authentication using JWT Tokens. Using Bcrypt and AES mechanism for secure Passwords and keys.
 ## Features
-Express JS Rest API Setup
-Authentication using JWT Tokens with Middlewares
-Learn how to setup a express js api with minimal codebase.
-Complete Signup/Login Flow.
-CRUD operations for Project (GET, POST, PUT, DELETE, InterAPI Connection)
-Testing
-API GATEWAY
-DOCKER
-REDIS
-KAFKA | RMQ
-AWS NODE DEPLOY
-SONAR QUBE
-JMETER
-POSTMAN TESTING & COLLECTION
-SWAGGER DOCUMENTATION
-MONGODB & POSTGRESQL
-SOCKET IO
-MOCHA CHAI
-ENCRYPTION AES 
-KEY PHRASE
-FETCH 
-GIT
-EXPRESS
-SELENIUM
+- Express JS Rest API Setup
+- Authentication using JWT Tokens with Middlewares
+- Learn how to setup a express js api with minimal codebase.
+- Complete Signup/Login Flow.
+- CRUD operations for Project (GET, POST, PUT, DELETE, InterAPI Connection)
+- Testing
+- API GATEWAY
+- DOCKER
+- REDIS
+- KAFKA | RMQ
+- AWS NODE DEPLOY
+- SONAR QUBE
+- JMETER
+- POSTMAN TESTING & COLLECTION
+- SWAGGER DOCUMENTATION
+- MONGODB & POSTGRESQL
+- SOCKET IO
+- MOCHA CHAI
+- ENCRYPTION AES 
+- KEY PHRASE
+- FETCH 
+- GIT
+- EXPRESS
+- SELENIUM
 ## Functionality
 
 # All API will be access from API-GATEWAY using jwtoken where-ever require
