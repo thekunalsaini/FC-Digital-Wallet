@@ -5,7 +5,7 @@ This is the Microservice architecture of Online Transfer Services Managemet syst
 - UPI API - (PORT: 5003)
 - NEFT API - (PORT: 5004)
 - IMPS API - (PORT: 5005)
-Here I am using <b>http-proxy-middlewre<b> for API Gateway and its running on PORT 5000.
+## Here I am using <b>http-proxy-middlewre<b> for API Gateway and its running on PORT 5000.
 API's to showcase CRUD operations using Express JS with Authentication using JWT Tokens. Using Bcrypt and AES mechanism for secure Passwords and keys.
 ## Features
 - Express JS Rest API Setup
